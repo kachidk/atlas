@@ -40,6 +40,8 @@ If your computer already has PHP and Composer installed, you may create a new pr
 ```bash
 composer create-project nwanguma/atlas your-project-name
 
+cd your-project-name
+
 npm install
 
 npm run dev
