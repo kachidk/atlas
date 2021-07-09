@@ -1,6 +1,8 @@
-# Laravel React Inertia Tailwind starter kit
+# Atlas
 
-## Includes Laravel Fortify for authentication
+## Laravel React Inertia Tailwind starter kit
+
+Includes Laravel Fortify for authentication
 
 ## Introduction
 
@@ -47,7 +49,6 @@ If your computer already has PHP and Composer installed, you may create a new pr
 5. php artisan key:generate
 
 6. php artisan storage:link
-
 ```
 
 ## To remove the documentation
