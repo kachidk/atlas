@@ -31,11 +31,12 @@ This starter is powered by React, Inertia, Tailwind and Laravel.
 
 ## How do I set this up
 
--   Run `composer create-project nwanguma/atlas your-project-name`
--   In the Root of your local Repository;
+### Installation Via Composer
+
+If your computer already has PHP and Composer installed, you may create a new project by using Composer directly.
 
 ```bash
-1. composer install
+1. composer create-project nwanguma/atlas your-project-name
 
 2. npm install
 
