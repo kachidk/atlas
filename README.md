@@ -84,7 +84,6 @@ php artisan storage:link
     .webpackConfig({
         resolve: {
             alias: {
-                //making a global alias
                 '@': path.resolve('resources/js')
             },
         },

@@ -1,5 +1,5 @@
-const mix = require('laravel-mix');
-const path = require('path');
+const mix = require("laravel-mix");
+const path = require("path");
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,16 +11,14 @@ const path = require('path');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .react()
-    .postCss('resources/css/app.css', 'public/css', [
-        require("tailwindcss"),
-    ])
-    .webpackConfig({
-        resolve: {
-            alias: {
-                //making a global alias
-                '@': path.resolve('resources/js')
-            },
-        },
-    });
+mix
+  .js("resources/js/app.js", "public/js")
+  .react()
+  .postCss("resources/css/app.css", "public/css", [require("tailwindcss")])
+  .webpackConfig({
+    resolve: {
+      alias: {
+        "@": path.resolve("resources/js"),
+      },
+    },
+  });
