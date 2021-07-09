@@ -38,32 +38,32 @@ This starter is powered by React, Inertia, Tailwind and Laravel.
 If your computer already has PHP and Composer installed, you may create a new project by using Composer directly.
 
 ```bash
-1. composer create-project nwanguma/atlas your-project-name
+composer create-project nwanguma/atlas your-project-name
 
-2. npm install
+npm install
 
-3. npm run dev
+npm run dev
 
-4. cp .env.example .env
+cp .env.example .env
 
-5. php artisan key:generate
+php artisan key:generate
 
-6. php artisan storage:link
+php artisan storage:link
 ```
 
 ## To remove the documentation
 
 -   windows
     ```bash
-    1. rmdir /s docs
-    2. del README.md
-    3. echo "" > README.md
+    rmdir /s docs
+    del README.md
+    echo "" > README.md
     ```
 -   linux
     ```bash
-    1. rm -r docs
-    2. rm README.md
-    3. touch README.md
+    rm -r docs
+    rm README.md
+    touch README.md
     ```
 
 ## Just Reminders 😅
