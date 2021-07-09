@@ -1,6 +1,6 @@
 # Laravel React Inertia Tailwind starter kit
 
-## Includes Laravel Fortify for authentication 
+## Includes Laravel Fortify for authentication
 
 ## Introduction
 
@@ -9,18 +9,18 @@ This starter kit provides a minimal and simple starting point for building a Lar
 This starter is powered by React, Inertia, Tailwind and Laravel.
 
 ### Includes
-* Laravel v8.40
-* Laravel fortify v1.7
-* Laravel sail v1.0.1
-* React v17.0.2
-* React prop-types v15.7.2
-* Inertia v0.8.7 
-* Inertia-react v0.5.12 
-* Inertia-laravel v0.4.2 
-* Inertia-progress v0.2.4 
-* Tailwindcss v2.1.2 
-* Ziggy v1.2
 
+-   Laravel v8.40
+-   Laravel fortify v1.7
+-   Laravel sail v1.0.1
+-   React v17.0.2
+-   React prop-types v15.7.2
+-   Inertia v0.8.7
+-   Inertia-react v0.5.12
+-   Inertia-laravel v0.4.2
+-   Inertia-progress v0.2.4
+-   Tailwindcss v2.1.2
+-   Ziggy v1.2
 
 ## Notable Packages
 
@@ -31,10 +31,8 @@ This starter is powered by React, Inertia, Tailwind and Laravel.
 
 ## How do I set this up
 
-* Click Use as Template up there.
-* Follow the self explanatory Steps.
-* Clone your generated Repo Locally ``` git clone repo-name new-folder-name ```
-* In the Root of your local Repository;
+-   Run `composer create-project nwanguma/atlas your-project-name`
+-   In the Root of your local Repository;
 
 ```bash
 1. composer install
@@ -49,24 +47,35 @@ This starter is powered by React, Inertia, Tailwind and Laravel.
 
 6. php artisan storage:link
 
-// To remove the documentation
-7. rm -r docs  // windows
-   rm -r docs  // linux
-
-8. del readme.md  // windows
-   rm README.md   // linux
-
 ```
+
+## To remove the documentation
+
+-   windows
+    ```bash
+    1. rmdir /s docs
+    2. del README.md
+    3. echo "" > README.md
+    ```
+-   linux
+    ```bash
+    1. rm -r docs
+    2. rm README.md
+    3. touch README.md
+    ```
 
 ## Just Reminders 😅
 
-* Make Hard Visits with 
+-   Make Hard Visits with
+
     ```
     Inertia::Location(route('login'));
     ```
+
     Good for those pages that require refresh of sessions, to avoid 419 error (Page Expired).
 
-* Global alias
+-   Global alias
+
     ```bash
     const path = require('path');
 
@@ -79,6 +88,7 @@ This starter is powered by React, Inertia, Tailwind and Laravel.
         },
     });
     ```
+
     I made a global alias '@' for absolute path imports.
 
 ## How it looks
