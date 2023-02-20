@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\publicControllers\profileController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 use Inertia\Inertia;
@@ -25,14 +25,12 @@ Route::get('/', function () {
     ]);
 });
 
-Route::inertia('/test', 'Test');
-
 Route::group(['middleware' => 'auth'], function() {
     Route::inertia('/home', 'Home');
 
-    Route::get('/profile', [profileController::class, 'index'])->name('profile');
-    Route::delete('/profilePhotoDelete', [profileController::class, 'deleteProfilePhoto'])->name('profilePhotoDelete');
-    Route::put('/profilePhotoUpdate', [profileController::class, 'updateProfilePhoto'])->name('profilePhotoUpdate');
-    Route::delete('/profileDelete', [profileController::class, 'deleteProfile'])->name('profileDelete');
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::delete('/profilePhotoDelete', [ProfileController::class, 'deleteProfilePhoto'])->name('profilePhotoDelete');
+    Route::put('/profilePhotoUpdate', [ProfileController::class, 'updateProfilePhoto'])->name('profilePhotoUpdate');
+    Route::delete('/profileDelete', [ProfileController::class, 'deleteProfile'])->name('profileDelete');
 
 });

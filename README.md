@@ -12,24 +12,21 @@ This starter is powered by React, Inertia, Tailwind and Laravel.
 
 ### Includes
 
--   Laravel v8.40
--   Laravel fortify v1.7
--   Laravel sail v1.0.1
--   React v17.0.2
--   React prop-types v15.7.2
--   Inertia v0.8.7
--   Inertia-react v0.5.12
--   Inertia-laravel v0.4.2
--   Inertia-progress v0.2.4
--   Tailwindcss v2.1.2
--   Ziggy v1.2
+- Laravel v10.0
+- Laravel Fortify v1.7
+- Laravel Sail v1.18
+- React v18.2
+- Inertia React v1.0.2
+- Inertia Laravel v0.6.9
+- Tailwind CSS v3.2
+- Ziggy v1.5
 
 ## Notable Packages
 
--   [Laravel](https://laravel.com) - Backend 🎰
--   [ReactJs](https://reactjs.com) - Frontend 💻
--   [InertiaJs](https://inertiajs.com) - Mediator(Helps discard API) 🧑‍🦯
--   [Tailwindcss](https://tailwindcss.com) - Styling 💅
+- [Laravel](https://laravel.com) - Backend 🎰
+- [ReactJs](https://reactjs.com) - Frontend 💻
+- [InertiaJs](https://inertiajs.com) - Mediator(Helps discard API) 🧑‍🦯
+- [Tailwind CSS](https://tailwindcss.com) - Styling 💅
 
 ## How do I set this up
 
@@ -38,68 +35,73 @@ This starter is powered by React, Inertia, Tailwind and Laravel.
 If your computer already has PHP and Composer installed, you may create a new project by using Composer directly.
 
 ```bash
-composer create-project nwanguma/atlas your-project-name
+composer create-project nwanguma/atlas <your-project-name>
 
-cd your-project-name
+cd <your-project-name>
 
 npm install
 
-npm run dev
-
-cp .env.example .env
+cp .env.example .env #Create .env from .env.example
 
 php artisan key:generate
 
 php artisan storage:link
+
+php artisan migrate
+
+npm run dev
 ```
 
 ## To remove the documentation
 
--   windows
-    ```bash
-    rmdir /s docs
-    del README.md
-    echo "" > README.md
-    ```
--   linux
-    ```bash
-    rm -r docs
-    rm README.md
-    touch README.md
-    ```
+- Windows
+  ```bash
+  rmdir /s docs
+  del README.md
+  ```
+- Linux
+  ```bash
+  sudo rm -r docs
+  rm README.md
+  ```
 
 ## Just Reminders 😅
 
--   Make Hard Visits with
+- Make Hard Visits with
 
-    ```
-    Inertia::Location(route('login'));
-    ```
+  ```php
+  Inertia::Location(route('login'));
+  ```
 
-    Good for those pages that require refresh of sessions, to avoid 419 error (Page Expired).
+  Good for those pages that require refresh of sessions, to avoid 419 error (Page Expired).
 
--   Global alias
+- Global alias
 
-    ```bash
-    const path = require('path');
+  ```js
+  const path = require("path");
 
-    .webpackConfig({
-        resolve: {
-            alias: {
-                '@': path.resolve('resources/js')
-            },
-        },
-    });
-    ```
+  export default defineConfig({
+    // ...
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "resources/ts"),
+      },
+    },
+  });
+  ```
 
-    I made a global alias '@' for absolute path imports.
+  I made a global alias `@` for absolute path imports.
 
 ## How it looks
 
-<img src='docs/login-page.png' />
+<img src='docs/images/login-page.png' />
 
-<img src='docs/home-page.png' />
+<img src='docs/images/home-page.png' />
 
-<img src ='docs/profile-page.png' />
+<img src='docs/images/profile-page.png' />
 
-<img src='docs/menu-page.png' />
+<img src='docs/images/menu-page.png' />
+
+## Want to Contribute?
+
+Feel free to create a pull request.

@@ -5,19 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Elevate') }}</title>
+        <title>{{ config('app.name', 'Atlas') }}</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
         <!-- Scripts -->
         @routes
-        <script src="{{ mix('js/app.js') }}" defer></script>
+        @viteReactRefresh
+        @vite(['resources/ts/app.tsx'])
+        @inertiaHead
     </head>
-    <body class="h-screen font-sans antialiased">
+    <body class="min-h-screen font-sans antialiased">
         @inertia
     </body>
 </html>
