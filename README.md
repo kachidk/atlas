@@ -41,7 +41,7 @@ cd <your-project-name>
 
 npm install
 
-cp .env.example .env #Create .env from .env.example
+cp .env.example .env # Create .env from .env.example
 
 php artisan key:generate
 
