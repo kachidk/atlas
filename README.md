@@ -41,15 +41,13 @@ cd <your-project-name>
 
 npm install
 
-cp .env.example .env # Create .env from .env.example
-
-php artisan key:generate
-
 php artisan storage:link
 
 php artisan migrate
 
 npm run dev
+
+php artisan serve
 ```
 
 ## To remove the documentation
