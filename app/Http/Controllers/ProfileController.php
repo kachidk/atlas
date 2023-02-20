@@ -13,7 +13,7 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        return Inertia::render('profile/Show');
+        return Inertia::render('Profile');
     }
 
     public function updateProfilePhoto(Request $request)
@@ -23,7 +23,7 @@ class ProfileController extends Controller
             $filename = auth()->user()->id . '.' . $photo->getClientOriginalExtension();
             if($photo->getClientOriginalExtension() !== 'jpg'){
 
-                return inertia('profile/Show', [
+                return inertia('Profile', [
                     'photoMessage' => 'Only upload .jpg files'
                 ]);
              }

@@ -1,12 +1,12 @@
 import React from "react";
-import SectionBorder from "../../components/SectionBorder";
-import DeleteUserForm from "./DeleteUserForm";
-import UpdatePasswordForm from "./UpdatePasswordForm";
-import UpdateProfileInformationForm from "./UpdateProfileInformationForm";
+import SectionBorder from "./components/SectionBorder";
+import DeleteUserForm from "./components/DeleteUserForm";
+import UpdatePasswordForm from "./components/UpdatePasswordForm";
+import UpdateProfileInformationForm from "./components/UpdateProfileInformationForm";
 import Layout from "../../layouts/Layout";
-import UpdateProfilePhoto from "./UpdateProfilePhoto";
+import UpdateProfilePhoto from "./components/UpdateProfilePhoto";
 
-function Show() {
+function Profile() {
   return (
     <div>
       <Layout>
@@ -28,4 +28,4 @@ function Show() {
   );
 }
 
-export default Show;
+export default Profile;

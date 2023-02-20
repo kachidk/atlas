@@ -1,19 +1,21 @@
 import { Link, useForm } from "@inertiajs/react";
-import React, { FormEvent } from "react";
+import React, { FormEvent, useEffect } from "react";
 
-interface Props {
-  status?: string;
-}
-
-function ForgotPassword({ status }: Props) {
-  const { data, setData, post, processing, errors } = useForm({
-    email: "",
+function ConfirmPassword() {
+  const { data, setData, post, processing, errors, reset } = useForm({
+    password: "",
   });
+
+  useEffect(() => {
+    return () => {
+      reset("password");
+    };
+  }, []);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    post("/forgot-password");
+    post("/user/confirm-password");
   };
 
   return (
@@ -25,36 +27,31 @@ function ForgotPassword({ status }: Props) {
       </div>
 
       <div className="max-w-xl p-4 mx-auto">
-        <h1 className="text-3xl text-center">Forgot Password</h1>
+        <h1 className="text-3xl text-center">Confirm Action</h1>
         <p className="mt-4 text-center">
-          Enter your email address and we will send you a link to reset your password.
+          This is a secure area of the application. Please confirm your password before continuing.
         </p>
-
-        {status && (
-          <div className="mb-4 text-sm font-medium text-green-600 dark:text-green-400">
-            {status}
-          </div>
-        )}
 
         <form className="flex flex-col pt-3 md:mt-8" onSubmit={handleSubmit}>
           <div className="flex flex-col pt-4">
-            <label htmlFor="email" className="text-lg">
-              Email
+            <label htmlFor="password" className="text-lg">
+              Password
             </label>
             <input
-              type="email"
-              id="email"
-              placeholder="your@email.com"
-              value={data.email}
-              onChange={(e) => setData("email", e.target.value)}
+              type="password"
+              id="password"
+              placeholder="Password"
+              value={data.password}
+              onChange={(e) => setData("password", e.target.value)}
+              autoFocus
               className="w-full px-3 py-2 mt-1 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
             />
-            {errors.email && <div className="text-sm text-red-500">{errors.email}</div>}
+            {errors.password && <div className="text-sm text-red-500">{errors.password}</div>}
           </div>
 
           <input
             type="submit"
-            value="Reset password"
+            value="Confirm"
             className="p-2 mt-8 text-lg font-bold text-white bg-black hover:bg-gray-700"
             disabled={processing}
           />
@@ -64,4 +61,4 @@ function ForgotPassword({ status }: Props) {
   );
 }
 
-export default ForgotPassword;
+export default ConfirmPassword;

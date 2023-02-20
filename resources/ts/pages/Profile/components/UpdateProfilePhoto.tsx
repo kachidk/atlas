@@ -1,6 +1,6 @@
 import React, { useState, useRef, MouseEvent } from "react";
 import { usePage, router } from "@inertiajs/react";
-import { profilePhoto } from "../../utils/profilePhoto";
+import { profilePhoto } from "../../../utils/profilePhoto";
 
 function UpdateProfilePhoto() {
   const [photoPreview, setPhotoPreview] = useState<string | ArrayBuffer | null | undefined>(null);

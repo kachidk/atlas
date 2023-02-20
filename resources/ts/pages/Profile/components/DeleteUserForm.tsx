@@ -1,5 +1,5 @@
 import React, { useState, useRef, MouseEvent } from "react";
-import Modal from "./components/Modal";
+import Modal from "./Modal";
 import { router } from "@inertiajs/react";
 import { usePage } from "@inertiajs/react";
 

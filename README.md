@@ -1,6 +1,6 @@
 # Atlas
 
-## Laravel React Inertia Tailwind starter kit
+## A Laravel, React (Typescript), Inertia & Tailwind starter kit. (Jetstream alternative)
 
 Includes Laravel Fortify for authentication
 
@@ -88,7 +88,7 @@ php artisan serve
   });
   ```
 
-  I made a global alias `@` for absolute path imports.
+  Global alias `@` for absolute path imports.
 
 ## How it looks
 

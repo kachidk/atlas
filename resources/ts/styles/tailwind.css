@@ -13,7 +13,3 @@
 button {
   @apply focus:outline-none;
 }
-
-* {
-  @apply focus:outline-none;
-}

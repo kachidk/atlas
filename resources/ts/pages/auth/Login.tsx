@@ -2,7 +2,11 @@ import React, { ChangeEvent, FormEvent, useState } from "react";
 import backgroundImage from "./assets/images/auth-image.jpg";
 import { Link, usePage, router } from "@inertiajs/react";
 
-function Login() {
+interface Props {
+  status?: string;
+}
+
+function Login({ status }: Props) {
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -38,7 +42,10 @@ function Login() {
 
           <div className="flex flex-col justify-center px-8 pt-8 my-auto md:justify-start md:pt-0 md:px-24 lg:px-32">
             <p className="text-3xl text-center">Welcome.</p>
-            <form className="flex flex-col pt-3 md:pt-8" onSubmit={handleSubmit}>
+
+            {status && <div className="my-4 text-sm font-medium text-green-600">{status}</div>}
+
+            <form className="flex flex-col mt-3 md:mt-8" onSubmit={handleSubmit}>
               <div className="flex flex-col pt-4">
                 <label htmlFor="email" className="text-lg">
                   Email
